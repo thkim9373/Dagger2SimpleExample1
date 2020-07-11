@@ -1,4 +1,4 @@
-package com.hoony.dagger2simpleexample.non_di.interfaces
+package com.hoony.dagger2simpleexample.interfaces
 
 interface Heater {
     fun on(): String

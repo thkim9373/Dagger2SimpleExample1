@@ -1,6 +1,6 @@
-package com.hoony.dagger2simpleexample.non_di
+package com.hoony.dagger2simpleexample.interfaces
 
-import com.hoony.dagger2simpleexample.non_di.interfaces.Heater
+import com.hoony.dagger2simpleexample.interfaces.Heater
 
 class A_Heater : Heater {
     private var heating: Boolean = false
