@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.hoony.dagger2simpleexample.R
-import com.hoony.dagger2simpleexample.di.Injection
 import kotlinx.android.synthetic.main.frag_coffee.*
 
 class DaggerFragment : Fragment() {
@@ -34,6 +33,6 @@ class DaggerFragment : Fragment() {
     }
 
     private fun makingCoffee(): String {
-        return Injection.provideCoffeeMaker().brew()
+        return DaggerCoffeeComponent.create().make().brew()
     }
 }

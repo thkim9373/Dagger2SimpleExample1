@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.hoony.dagger2simpleexample.CoffeeMaker
 import com.hoony.dagger2simpleexample.R
 import com.hoony.dagger2simpleexample.interfaces.A_Heater
 import com.hoony.dagger2simpleexample.interfaces.A_Pump
@@ -37,7 +38,8 @@ class NonDIFragment : Fragment() {
     private fun makingCoffee(): String {
         val heater = A_Heater()
         val pump = A_Pump(heater)
-        val coffeeMaker = CoffeeMaker(heater, pump)
+        val coffeeMaker =
+            CoffeeMaker(heater, pump)
         return coffeeMaker.brew()
     }
 }

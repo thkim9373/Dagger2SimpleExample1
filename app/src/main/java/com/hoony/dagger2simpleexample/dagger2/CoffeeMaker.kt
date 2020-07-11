@@ -1,12 +1,14 @@
-package com.hoony.dagger2simpleexample.non_di
+package com.hoony.dagger2simpleexample.dagger2
 
 import com.hoony.dagger2simpleexample.interfaces.Heater
 import com.hoony.dagger2simpleexample.interfaces.Pump
+import javax.inject.Inject
 
-class CoffeeMaker(
+class CoffeeMaker @Inject constructor(
     private val heater: Heater,
     private val pump: Pump
 ) {
+
     fun brew(): String {
         var coffeeBrewingStep = ""
 
